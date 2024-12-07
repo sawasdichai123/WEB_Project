@@ -1,0 +1,28 @@
+<p>booking-form works!</p>
+<div class="container">
+    <h2>{{ bookingId ? 'แก้ไขการจอง' : 'สร้างการจองใหม่' }}</h2>
+    <form [formGroup]="bookingForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="user_name">ชื่อลูกค้า</label>
+        <input type="text" id="user_name" class="form-control" formControlName="user_name">
+      </div>
+      <div class="form-group">
+        <label for="package_name">ชื่อแพ็คเกจ</label>
+        <input type="text" id="package_name" class="form-control" formControlName="package_name">
+      </div>
+      <div class="form-group">
+        <label for="booking_date">วันที่จอง</label>
+        <input type="date" id="booking_date" class="form-control" formControlName="booking_date">
+      </div>
+      <div class="form-group">
+        <label for="status">สถานะ</label>
+        <select id="status" class="form-control" formControlName="status">
+          <option value="Pending">รอดำเนินการ</option>
+          <option value="Confirmed">ยืนยันแล้ว</option>
+          <option value="Cancelled">ยกเลิก</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-success mt-3">{{ bookingId ? 'อัปเดต' : 'สร้าง' }}</button>
+      <button type="button" class="btn btn-secondary mt-3 ml-2" routerLink="/">ยกเลิก</button>
+    </form>
+  </div>

@@ -1,0 +1,11 @@
+<p>booking-detail works!</p>
+<div class="container">
+    <h2>รายละเอียดการจอง</h2>
+    <div *ngIf="booking">
+      <p><strong>ชื่อลูกค้า:</strong> {{ booking.user_name }}</p>
+      <p><strong>ชื่อแพ็คเกจ:</strong> {{ booking.package_name }}</p>
+      <p><strong>วันที่จอง:</strong> {{ booking.booking_date | date }}</p>
+      <p><strong>สถานะ:</strong> {{ booking.status | status }}</p>
+    </div>
+    <button class="btn btn-primary" (click)="backToList()">กลับไปยังรายการ</button>
+  </div>

@@ -1,0 +1,25 @@
+<h1>{{ title }}</h1>
+
+<form (ngSubmit)="submitBooking()">
+  <label>
+    Name:
+    <input [(ngModel)]="booking.customerName" name="customerName" required />
+  </label>
+  <br />
+  <label>
+    Phone:
+    <input [(ngModel)]="booking.customerPhone" name="customerPhone" required />
+  </label>
+  <br />
+  <label>
+    Check-in Date:
+    <input [(ngModel)]="booking.checkInDate" type="date" name="checkInDate" required />
+  </label>
+  <br />
+  <label>
+    Check-out Date:
+    <input [(ngModel)]="booking.checkOutDate" type="date" name="checkOutDate" required />
+  </label>
+  <br />
+  <button type="submit">Submit Booking</button>
+</form>
