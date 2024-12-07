@@ -1,7 +1,8 @@
 CREATE TABLE bookings (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    user_name VARCHAR(255) NOT NULL,
-    package_name VARCHAR(255) NOT NULL,
-    booking_date DATE NOT NULL,
-    status VARCHAR(50) NOT NULL
+    customer_name VARCHAR(255) NOT NULL,
+    phone_number VARCHAR(20) NOT NULL,
+    check_in_date DATE NOT NULL,
+    check_out_date DATE NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
